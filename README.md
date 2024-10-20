@@ -45,7 +45,7 @@ ecommerce-solution/
 │   ├── utils/              # Utility functions
 │   ├── App.tsx             # Main App component
 │   └── index.tsx           # React entry point
-|-- package.json            # Project dependencies and scripts
+├── package.json            # Project dependencies and scripts
 └── vite.config.ts          # Vite configuration
 ```
 
