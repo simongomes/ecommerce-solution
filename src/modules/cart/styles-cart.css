@@ -1,0 +1,21 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 800px;
+}
+.cart-container .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+.product-title {
+  width: 30%;
+}

@@ -1,0 +1,38 @@
+.layout-main {
+}
+.site-hader {
+  background-color: #24292e;
+  color: #e1e4e8;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-hader a,
+.site-hader a:hover {
+  color: #e1e4e8;
+}
+.logo {
+  margin: 0;
+  font-size: 2rem;
+}
+.site-content {
+  padding: 1em;
+  background-color: rgb(235, 238, 231);
+}
+.cart-action {
+  background-color: #666666;
+  width: 30px;
+  height: 30px;
+  padding-right: 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cart-action .cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
