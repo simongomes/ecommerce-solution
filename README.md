@@ -1,50 +1,93 @@
-# React + TypeScript + Vite
+# eCommerce Solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a comprehensive **eCommerce platform** built with **React**, **Redux**, and **TypeScript**, following modern development standards and clean architecture principles. The application is designed to scale and offers features like product listings, cart functionality, and a seamless checkout experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Product Catalog**: Displays products with descriptions, images, prices, and ratings.
+- **Cart Functionality**: Users can add, update, and remove items from the cart.
+- **Checkout Flow**: Complete checkout process.
+- **Related Products**: Dynamic product recommendations based on category.
+- **Responsive Design**: Optimized for both mobile and desktop.
+- **State Management**: Utilizes Redux for global state handling.
+- **Testing**: Unit tests for components and state management using Vitest.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** (v18+)
+- **Redux** (Basic redux store setup)
+- **TypeScript**
+- **Vite** (for fast development builds)
+- **Ant Design** (UI Components)
+- **Vitest** (for unit testing)
 
-- Configure the top-level `parserOptions` property like this:
+## Project Setup and Architecture
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+This project follows a modular and feature-based structure:
+
+- **Modular Design**: Each feature, such as products or cart, is encapsulated within its own module.
+- **Redux for State Management**: Centralized state management using Redux allows for scalable and predictable state management.
+- **React Components**: Components are broken into small, reusable parts, with shared components located in the `components/` directory.
+- **Vite for Development**: Vite offers faster builds, HMR (Hot Module Replacement), and a lean setup for modern front-end frameworks.
+- **Testing**: Unit tests for all components and Redux logic are located in `src/tests/`.
+
+### Folder Structure
+
+```
+ecommerce-solution/
+├── public/
+├── src/
+│   ├── components/         # Shared UI components
+│   ├── modules/            # Feature modules (Product, Cart, etc.)
+│   ├── store/              # Redux store, reducers, actions, and thunks
+│   ├── styles/             # Global styles
+│   ├── tests/              # Unit and integration tests
+│   ├── utils/              # Utility functions
+│   ├── App.tsx             # Main App component
+│   └── index.tsx           # React entry point
+|-- package.json            # Project dependencies and scripts
+└── vite.config.ts          # Vite configuration
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository**:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+   ```bash
+   git clone https://github.com/simongomes/ecommerce-solution.git
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+## Testing
+
+Run unit tests with **Vitest**:
+
+```bash
+npm run test
 ```
+
+Tests are stored in the `src/tests/` directory and ensure the integrity of components and state logic.
+
+## Contributing
+
+Contribution will be allowed for company employees (developers and engineers).
+
+## License
+
+This project licensed will be determined by company requirement.
